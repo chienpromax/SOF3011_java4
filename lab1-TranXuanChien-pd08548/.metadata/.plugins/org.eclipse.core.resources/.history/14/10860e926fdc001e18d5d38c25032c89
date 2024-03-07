@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>kết quả</h2>
+	<hr>
+	<h3>Diện tích: (${NUMBERA} + ${NUMBERb}) * 2 = ${DIENTICH}</h3>
+	<h3>Chu vi: ${NUMBERA} * ${NUMBERb} = ${CHUVI}</h3>
+
+</body>
+</html>

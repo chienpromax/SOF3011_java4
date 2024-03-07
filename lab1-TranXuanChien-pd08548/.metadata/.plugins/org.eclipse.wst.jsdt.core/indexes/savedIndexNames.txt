@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+E:\hoc\kì 5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+838664819.index
+3866331204.index
+1342516512.index
+3738175163.index
+2055351946.index
+2753150756.index
+3919845168.index
+934351736.index

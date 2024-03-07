@@ -1,0 +1,11 @@
+127.0.0.1 - - [07/Mar/2024:10:09:50 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:09:50 +0700] "GET /calculator/WEB-INF/classes/fpoly/edu/vn/calculatorServlet.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:09:50 +0700] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [07/Mar/2024:10:17:30 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:17:31 +0700] "GET /HelloServlet/Views/index.jsp HTTP/1.1" 200 157
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:18:08 +0700] "GET /HelloServlet/HelloServlet HTTP/1.1" 200 20
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:19:12 +0700] "GET /calculator/WEB-INF/classes/poly/edu/vn/calculatorServlet.java HTTP/1.1" 404 682
+127.0.0.1 - - [07/Mar/2024:10:22:44 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:22:44 +0700] "GET /calculator/WEB-INF/classes/poly/edu/vn/caculatoServlet.java HTTP/1.1" 404 682
+127.0.0.1 - - [07/Mar/2024:10:25:14 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [07/Mar/2024:10:25:15 +0700] "GET /calculator/WEB-INF/classes/poly/edu/vn/caculatoServlet.java HTTP/1.1" 404 682
