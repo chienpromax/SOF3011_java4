@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="E:\hoc\kì 5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\hoc\kì 5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\calculator" path="/calculator" reloadable="true" source="org.eclipse.jst.jee.server:calculator"/><Context docBase="E:\hoc\kì 5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\HelloServlet" path="/HelloServlet" reloadable="true" source="org.eclipse.jst.jee.server:HelloServlet"/><Context docBase="E:\hoc\kì 5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\hinhChuNhat" path="/hinhChuNhat" reloadable="true" source="org.eclipse.jst.jee.server:hinhChuNhat"/></Host>
+      <Context docBase="E:\hoc\season5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="E:\hoc\season5\java 4\bailam\lab1-TranXuanChien-pd08548\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\HinhTamGiac" path="/HinhTamGiac" reloadable="true" source="org.eclipse.jst.jee.server:HinhTamGiac"/></Host>
     </Engine>
   </Service>
 </Server>

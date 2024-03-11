@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+E:\hoc\kì 5\java 4\bailam\lab1\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1884086904.index
-2055351946.index
-3545417176.index
-1910562860.index
-1344012599.index
-3682577280.index
-3738175163.index
