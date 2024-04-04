@@ -16,6 +16,20 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\xuanc\Desktop\SOF3011-master\SOF3011-master\PolyAss"/>
+			<item value="C:\Users\xuanc\Desktop\SOF3011_ASSIGNMENT_WEB_PHIM-master"/>
+			<item value="C:\Users\xuanc\Desktop\SOF3011-master\SOF3011-master\Lab7\src"/>
+			<item value="E:\hoc\kì 4\sof204-DuAnMau\TranXuanChien_PD08548_SOF204\EduSys"/>
+			<item value="C:\Users\xuanc\Desktop\bailamkiemthu\tranXuanChien-pd0858-Lab7"/>
+			<item value="C:\Users\xuanc\Desktop\SOF3011-master\SOF3011-master\Lab6"/>
+			<item value="E:\hoc\season5\java 4\bailam\lab6-TranXuanChien-pd08548"/>
+			<item value="E:\hoc\season5\java 4\bailam\lab4-TranXuanChien-pd08548"/>
+			<item value="C:\Users\xuanc\Desktop\tranXuanChien-pd0858-Lab5\tranXuanChien-pd0858-Lab5\lab5"/>
+			<item value="C:\Users\xuanc\Desktop\bailamkiemthu\tranXuanChien-pd0858-Lab5\lab5"/>
+			<item value="C:\Users\xuanc\Desktop\bailamkiemthu\tranXuanChien-pd0858-Lab5"/>
+			<item value="E:\hoc\season5\java 4\bailam\tranxuanchien-pd08548-assiment-test"/>
+			<item value="C:\Users\xuanc\Desktop\SOF3011-master\SOF3011-master\Lab4\src"/>
+			<item value="E:\hoc\season5\java 4\bailam\lab3-TranXuanChien-pd08548"/>
 			<item value="C:\Users\xuanc\Desktop\bailamkiemthu\tranXuanChien-pd0858-Lab3\lab3"/>
 			<item value="C:\Users\xuanc\Desktop\bailamkiemthu\tranXuanChien-pd0858-Lab3"/>
 			<item value="C:\Users\xuanc\Desktop\PD06670_VOVANHOANGHUU_Lab3_java4"/>
@@ -29,5 +43,7 @@
 	<section name="WORKBENCH_SETTINGS">
 		<list key="ENABLED_TRANSFERS">
 		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
 	</section>
 </section>
