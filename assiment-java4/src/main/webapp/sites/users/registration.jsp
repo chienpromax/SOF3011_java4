@@ -16,7 +16,7 @@
 				</div>
 				<div class="mb-3">
 					<label for="" class="form-label">Password</label> <input
-						type="text" class="form-control" name="password" id="" "/>
+						type="password" class="form-control" name="password" id="" "/>
 				</div>
 			</div>
 			<div class="col-md-6">

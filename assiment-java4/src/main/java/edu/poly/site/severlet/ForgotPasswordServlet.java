@@ -19,7 +19,6 @@ import edu.poly.model.User;
 public class ForgotPasswordServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		PageInfo.prepareAndForwardSite(request, response, PageType.SITE_FORGOT_PASSWORD_PAGE);
 	}
 
@@ -41,9 +40,9 @@ public class ForgotPasswordServlet extends HttpServlet {
 				email.setTo(emailAddress);
 				email.setSubject("Forgot Password");
 				StringBuilder sb = new StringBuilder();
-				sb.append("Dear").append(username).append("<br>");
+				sb.append("Dear: ").append(username).append("<br>");
 				sb.append("You are used the forgot password function.<br>");
-				sb.append("You password is: <b> ").append(user.getPassword()).append("</b>");
+				sb.append("You password is: <b> ").append(user.getPassword()).append("</b><br>");
 				sb.append("Regards<br>");
 				sb.append("Administrator");
 				email.setContent(sb.toString());

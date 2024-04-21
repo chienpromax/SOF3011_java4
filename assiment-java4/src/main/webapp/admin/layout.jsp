@@ -22,7 +22,7 @@
 	<main class="container-fluid">
         <nav class="navbar navbar-expand-lg" style="z-index: 100;" ng-controller="navigationCtrl">
             <div class="container">
-                <a class="navbar-brand" href="#">Adminstration</a>
+                <a class="navbar-brand" href="VideoManagement">Adminstration</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,13 +31,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto my-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="Homepage">Trang chủ</a>
+                            <a class="nav-link" href="HomeManagemert">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Admin/VideoManagement">Video</a>
+                            <a class="nav-link" href="VideoManagement">Video</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="UsersManagement">Users</a>
+                            <a class="nav-link" href="Admin/UsersManagement">Users</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ReportsManagement">Reprots</a>

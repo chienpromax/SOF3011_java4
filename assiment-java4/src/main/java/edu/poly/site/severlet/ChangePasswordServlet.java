@@ -20,7 +20,7 @@ import edu.poly.domain.ChangePasswordForm;
 public class ChangePasswordServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = SessionUtils.getLogInedUsername(request);
+		String username = SessionUtils.getLoginedUsername(request);
 		if (username == null) {
 			request.getRequestDispatcher("/login").forward(request, response);
 			return;
@@ -31,7 +31,7 @@ public class ChangePasswordServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    try {
-	        String username = SessionUtils.getLogInedUsername(request);
+	        String username = SessionUtils.getLoginedUsername(request);
 	        ChangePasswordForm form = new ChangePasswordForm();
 	        BeanUtils.populate(form, request.getParameterMap());
 	        request.setAttribute("username", username);

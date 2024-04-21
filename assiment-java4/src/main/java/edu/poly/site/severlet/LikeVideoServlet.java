@@ -41,7 +41,7 @@ public class LikeVideoServlet extends HttpServlet {
 			video.setVideoid(videoId);
 			fav.setVideo(video);
 			
-			String username = SessionUtils.getLogInedUsername(request);
+			String username = SessionUtils.getLoginedUsername(request);
 			User user = new User();
 			user.setUsername(username);
 			fav.setUser(user);
@@ -62,8 +62,7 @@ public class LikeVideoServlet extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	    doGet(request, response);
 	}
 
 }

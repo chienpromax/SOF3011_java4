@@ -42,7 +42,6 @@ public class UserDao extends AbstractEntityDao<User>{
 			TypedQuery<User> query = em.createQuery(jpql, User.class);
 			query.setParameter("username", username);
 			query.setParameter("email", email);
-
 			return query.getSingleResult();
 		} finally {
 			em.close();

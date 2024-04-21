@@ -20,7 +20,7 @@ public class SessionUtils {
 	public static boolean isLogin(HttpServletRequest request) {
 		return get(request, "username") !=null;
 	}
-	public static String getLogInedUsername(HttpServletRequest request) {
+	public static String getLoginedUsername(HttpServletRequest request) {
 		Object username = get(request, "username");
 		return username == null ? null : username.toString();
 	}

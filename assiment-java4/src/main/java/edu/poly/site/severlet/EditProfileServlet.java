@@ -20,7 +20,7 @@ import edu.poly.model.User;
 public class EditProfileServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = SessionUtils.getLogInedUsername(request);
+		String username = SessionUtils.getLoginedUsername(request);
 		
 		if (username == null) {
 			request.getRequestDispatcher("/login").forward(request, response);
@@ -42,7 +42,7 @@ public class EditProfileServlet extends HttpServlet {
 			User user = new User();
 			BeanUtils.populate(user, request.getParameterMap());
 			
-			String username = SessionUtils.getLogInedUsername(request);
+			String username = SessionUtils.getLoginedUsername(request);
 			UserDao dao = new UserDao();
 			User olduser = dao.findById(username);
 			

@@ -19,9 +19,7 @@ import edu.poly.model.Share;
 import edu.poly.model.User;
 import edu.poly.model.Video;
 
-/**
- * Servlet implementation class ShareServlet
- */
+
 @WebServlet("/ShareVideo")
 public class ShareVideoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +31,7 @@ public class ShareVideoServlet extends HttpServlet {
 		}
 		String videoId = request.getParameter("videoId");
 		if (videoId == null) {
-			response.sendRedirect("/Homepage");
+			response.sendRedirect("/assiment-java4/Homepage");
 			return;
 		}
 		request.setAttribute("videoId", videoId);
@@ -62,10 +60,9 @@ public class ShareVideoServlet extends HttpServlet {
 				email.setSubject("Share favorite video");
 				StringBuilder sb = new StringBuilder();
 				sb.append("Dear Ms/Mr .<br>");
-				sb.append("The video is more interesting and I want to share with you.<br>");
-				sb.append("Please click the link").append(String.format("<a href='http://localhost:8080/PolyAss/admin/detail?videoId=</a><br>"+videoId));
-				sb.append("Regards<br>");
-				sb.append("Administrator");
+				sb.append("video này rất thú vị tôi muốn gửi đến bạn.<br>");
+				sb.append("click để xem").append(String.format("<a href='http://localhost:8080/assiment-java4/DetailVideo?videoId=%s'> Link đây</a><br>", videoId));
+				sb.append("Trân trọng<br>");
 				email.setContent(sb.toString());
 				EmailUtils.send(email);
 				
@@ -74,16 +71,15 @@ public class ShareVideoServlet extends HttpServlet {
 				share.setEmail(emailAddress);
 				share.setShareDate(new Date());
 				
-				String username = SessionUtils.getLogInedUsername(request);
+				String username = SessionUtils.getLoginedUsername(request);
 				User user = new User();
 				user.setUsername(username);
 				share.setUser(user);
 				Video video = new Video();
 				video.setVideoid(videoId);
+				share.setVideo(video);
 				
 				dao.insert(share);
-			
-				
 				request.setAttribute("message", "Video share ok");
 			}
 		} catch (Exception e) {

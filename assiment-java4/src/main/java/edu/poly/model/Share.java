@@ -6,10 +6,6 @@ import java.util.Date;
 import javax.persistence.*;
 
 
-/**
- * The persistent class for the Shares database table.
- * 
- */
 @Entity
 @Table(name="Shares")
 @NamedQuery(name="Share.findAll", query="SELECT s FROM Share s")

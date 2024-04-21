@@ -6,7 +6,7 @@
 <div class="offset-3 col-6 pt-5">
 	<form action="ShareVideo" method="POST">
 	<jsp:include page="/common/inform.jsp"></jsp:include>
-	<input type="hidden" name="videoId" value="${videoId}" />
+	<input type="hidden" name=videoId value="${videoId}" />
 		<h2 class="text-center text-primary">Chia sẻ</h2>
 		<div class="mb-3">
 			<label for="" class="form-label">Nhập Email</label> <input

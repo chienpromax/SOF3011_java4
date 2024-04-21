@@ -51,6 +51,12 @@
 									placeholder="View Count"
 									value="${not empty requestScope.video ? requestScope.video.views : ''}" />
 							</div>
+							<div class="mb-3">
+								<label for="linkvideo" class="form-label">Video Link</label>
+								<input type="text" class="form-control" name="linkvideo"
+									id="linkvideo" placeholder="Youtube linkvideo"
+									value="${not empty requestScope.video ? requestScope.video.linkvideo : ''}" />
+							</div>
 							<div class="form-check form-check-inline">
 								<label style="margin-right: 35px;"> <input type="radio"
 									class="form-check-input" value="true" name="active" id="status"
@@ -82,7 +88,7 @@
 					<button class="btn btn-primary"
 						formaction="Admin/VideoManagement/delete">Delete</button>
 					<button class="btn btn-primary"
-						formaction="Admin/VideoManagement/reset">Reset</button>
+						formaction="Admin/VideoManagement/resert">Reset</button>
 				</div>
 			</div>
 		</form>
@@ -95,6 +101,7 @@
 					<th>Youtube ID</th>
 					<th>Video Title</th>
 					<th>View Count</th>
+					<th>LinkVideo</th>
 					<th>Status</th>
 					<th>&nbsp;</th>
 				</tr>
@@ -104,9 +111,10 @@
 						<td>${item.videoid}</td>
 						<td>${item.title}</td>
 						<td>${item.views}</td>
+						<td>${item.linkvideo}</td>
 						<td>${item.active? 'Active': 'Deactive'}</td>
-						<td><a href="admin/edit?videoId=${item.videoid}">Edit</a>
-							<a href="admin/delete?videoId=${item.videoid}">Delete</a></td>
+						<td><a href="Admin/VideoManagement/edit?videoId=${item.videoid}">Edit</a>
+							<a href="Admin/VideoManagement/delete?videoid=${item.videoid}">Delete</a></td>
 					</tr>
 				</c:forEach>
 		</table>

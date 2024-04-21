@@ -30,6 +30,9 @@ public class Video implements Serializable {
 
 	@Column(name="Title")
 	private String title;
+	
+	@Column(name="LinkVideo")
+	private String linkvideo;
 
 	@Column(name="Views")
 	private int views;
@@ -41,20 +44,34 @@ public class Video implements Serializable {
 	//bi-directional many-to-one association to Share
 	@OneToMany(mappedBy="video")
 	private List<Share> shares;
-
+	
+	
 	public Video() {
 	}
 
+	public Video(String videoid, boolean active, String description, String poster, String title, String linkvideo,
+			int views, List<Favorite> favorites, List<Share> shares) {
+		this.videoid = videoid;
+		this.active = active;
+		this.description = description;
+		this.poster = poster;
+		this.title = title;
+		this.linkvideo = linkvideo;
+		this.views = views;
+		this.favorites = favorites;
+		this.shares = shares;
+	}
+
 	public String getVideoid() {
-		return this.videoid;
+		return videoid;
 	}
 
 	public void setVideoid(String videoid) {
 		this.videoid = videoid;
 	}
 
-	public boolean getActive() {
-		return this.active;
+	public boolean isActive() {
+		return active;
 	}
 
 	public void setActive(boolean active) {
@@ -62,7 +79,7 @@ public class Video implements Serializable {
 	}
 
 	public String getDescription() {
-		return this.description;
+		return description;
 	}
 
 	public void setDescription(String description) {
@@ -70,7 +87,7 @@ public class Video implements Serializable {
 	}
 
 	public String getPoster() {
-		return this.poster;
+		return poster;
 	}
 
 	public void setPoster(String poster) {
@@ -78,15 +95,23 @@ public class Video implements Serializable {
 	}
 
 	public String getTitle() {
-		return this.title;
+		return title;
 	}
 
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
+	public String getLinkvideo() {
+		return linkvideo;
+	}
+
+	public void setLinkvideo(String linkvideo) {
+		this.linkvideo = linkvideo;
+	}
+
 	public int getViews() {
-		return this.views;
+		return views;
 	}
 
 	public void setViews(int views) {
@@ -94,47 +119,23 @@ public class Video implements Serializable {
 	}
 
 	public List<Favorite> getFavorites() {
-		return this.favorites;
+		return favorites;
 	}
 
 	public void setFavorites(List<Favorite> favorites) {
 		this.favorites = favorites;
 	}
 
-	public Favorite addFavorite(Favorite favorite) {
-		getFavorites().add(favorite);
-		favorite.setVideo(this);
-
-		return favorite;
-	}
-
-	public Favorite removeFavorite(Favorite favorite) {
-		getFavorites().remove(favorite);
-		favorite.setVideo(null);
-
-		return favorite;
-	}
-
 	public List<Share> getShares() {
-		return this.shares;
+		return shares;
 	}
 
 	public void setShares(List<Share> shares) {
 		this.shares = shares;
 	}
 
-	public Share addShare(Share share) {
-		getShares().add(share);
-		share.setVideo(this);
-
-		return share;
-	}
-
-	public Share removeShare(Share share) {
-		getShares().remove(share);
-		share.setVideo(null);
-
-		return share;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 }

@@ -27,41 +27,57 @@
 							<div class="mb-3">
 								<label for="fullname" class="form-label">User name</label> <input
 									type="text" class="form-control" name="username" id="username"
-									aria-describedby="usernamehelp" placeholder="Nhập Tên" /> <small
-									id="usernamehelp" class="form-text text-muted">username
-									is required</small>
+									aria-describedby="usernamehelp" placeholder="Nhập Tên"
+									value="${user.username}" />
 							</div>
 							<div class="mb-3">
 								<label for="fullname" class="form-label">Full name</label> <input
 									type="text" class="form-control" name="fullname" id="fullname"
-									aria-describedby="fullnamehelp" placeholder="Nhập Tên đầy đủ" />
-								<small id="fullnamehelp" class="form-text text-muted">fullname
-									is required</small>
+									aria-describedby="fullnamehelp" placeholder="Nhập Tên đầy đủ"
+									value="${user.fullname}" />
 							</div>
 						</div>
 						<div class="col">
 							<div class="mb-3">
 								<label for="password" class="form-label">Password</label> <input
 									type="text" class="form-control" name="password" id="password"
-									aria-describedby="passwordhelp" placeholder="Nhập mât khẩu" />
-								<small id="passwordhelp" class="form-text text-muted">password
-									is required</small>
+									aria-describedby="passwordhelp" placeholder="Nhập mât khẩu"
+									value="${user.password}" />
 							</div>
 							<div class="mb-3">
 								<label for="email" class="form-label">Email</label> <input
 									type="text" class="form-control" name="email" id="email"
-									aria-describedby="emailhelp" placeholder="Nhập Email" /> <small
-									id="emailhelp" class="form-text text-muted">email is
-									required</small>
+									aria-describedby="emailhelp" placeholder="Nhập Email"
+									value="${user.email}" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="role">Role</label>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="admin"
+									id="admin" value="true"
+									<c:if test="${user.admin}">checked</c:if>> <label
+									class="form-check-label" for="admin">Admin</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" name="user"
+									id="user" value="true"
+									<c:if test="${!user.admin}">checked</c:if>> <label
+									class="form-check-label" for="user">User</label>
 							</div>
 						</div>
 					</div>
 				</div>
+				<jsp:include page="/common/inform.jsp"></jsp:include>
 				<div class="card-footer text-muted text-center">
-					<button class="btn btn-primary">Create</button>
-					<button class="btn btn-primary">Update</button>
-					<button class="btn btn-primary">Delete</button>
-					<button class="btn btn-primary">Reset</button>
+					<button class="btn btn-primary"
+						formaction="Admin/UsersManagement/create">Create</button>
+					<button class="btn btn-primary"
+						formaction="Admin/UsersManagement/update">Update</button>
+					<button class="btn btn-primary"
+						formaction="Admin/UsersManagement/delete">Delete</button>
+					<button class="btn btn-primary"
+						formaction="Admin/UsersManagement/reset">Reset</button>
 				</div>
 			</div>
 		</form>
@@ -73,31 +89,22 @@
 				<tr>
 					<th>Username</th>
 					<th>Fullname</th>
-					<th>Password</th>
 					<th>Email</th>
+					<th>Role</th>
 					<th>&nbsp;</th>
 				</tr>
 			</thead>
-			<tbody>
+			<c:forEach var="item" items="${users}">
 				<tr>
-					<td>Chien123</td>
-					<td>Chiến tx</td>
-					<td>123123</td>
-					<td>Chien@gmail.com</td>
-					<td><a href="#"><i class="fa-solid fa-pen-to-square"
-							aria-hidden="false"></i> Sửa</a> <a href="#"><i
-							class="fa-solid fa-trash" aria-hidden="true"></i></i> Xóa</a></td>
+					<td>${item.username}</td>
+					<td>${item.fullname}</td>
+					<td>${item.email}</td>
+					<td>${item.admin ? 'Admin' : 'User'}</td>
+					<td><a
+						href="Admin/UsersManagement/edit?username=${item.username}">Edit</a>
+					</td>
 				</tr>
-				<tr>
-					<td>Chien</td>
-					<td>Chiến123</td>
-					<td>123123123</td>
-					<td>Chie123n@gmail.com</td>
-					<td><a href="#"><i class="fa-solid fa-pen-to-square"
-							aria-hidden="false"></i> Sửa</a> <a href="#"><i
-							class="fa-solid fa-trash" aria-hidden="true"></i></i> Xóa</a></td>
-				</tr>
-			</tbody>
+			</c:forEach>
 		</table>
 	</div>
 </div>

@@ -36,42 +36,39 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>Giới thiệu Zongli</td>
-						<td>102</td>
-						<td>01/12/2023</td>
-						<td>01/12/2023</td>
-					</tr>
-					<tr>
-						<td>Giới thiệu Furina</td>
-						<td>102</td>
-						<td>01/12/2023</td>
-						<td>01/12/2023</td>
-					</tr>
+					<c:forEach var="item" items="${favList}">
+						<tr>
+							<td>${item.videoTitle }</td>
+							<td>${item.favoriteCount }</td>
+							<td>${item.newestDate }</td>
+							<td>${item.oldestDate }</td>
+						</tr>
+					</c:forEach>
 				</tbody>
 			</table>
 		</div>
 	</div>
 	<div class="tab-pane fade" id="favoriteuser" role="tabpanel"
 		aria-labelledby="favoriteuser-tab">
-		<form action="" method="get">
+		<form method="get">
 			<div class="row mt3">
 				<div class="col">
-					<form class="d-flex">
-						<div class="col">
-							<div class="form-group mb-3">
-								<label for="" class="form-control">Video title <select
-									name="videoUserId" id="videoUserId" class="form-control m-3">
-										<c:forEach var="item" items="${vidList}">
-											<option value="${item.videoid}"
-												${item.videoid == videoUserId ? 'selected' : ''}>${item.title}</option>
-										</c:forEach>
-								</select>
-								</label>
-								<button class="btn btn-danger">Report</button>
-							</div>
-						</div>
-					</form>
+					<div class="form-group mb-3">
+						<label for="" class="form-control">Video Title <select
+							name="videoUserId" id="videoUserId" class="form-control m-3">
+								<!-- <c:forEach var="item" items="${vidList}">
+									<option value="${item.videoid}"
+										${item.videoid == videoUserId ? 'selected' : ''}>${item.videoid}</option> 
+										</c:forEach> -->
+								<c:forEach var="item" items="${vidList}">
+									<option value="${item.videoid}"
+										${item.videoid == videoUserId ? 'selected' : ''}>${item.title}</option>
+								</c:forEach>
+
+						</select>
+						</label>
+						<button class="btn btn-primary">Report</button>
+					</div>
 					<div class="row">
 						<div class="col mt-3">
 							<div class="table-responsive">
@@ -102,21 +99,20 @@
 	</div>
 	<div class="tab-pane fade" id="shareriends" role="tabpanel"
 		aria-labelledby="shareriends-tab">
-		<form action="" method="get">
+		<form method="get">
 			<div class="row mt3">
 				<div class="col">
-					<form class="d-flex">
-						<div class="col">
-							<div class="form-group mb-3">
-								<label for="" class="form-control">Video title <select
-									name="" id="" class="form-control m-3">
-										<option value="" class="pt-5">Giới thiệu zongli</option>
-								</select>
-								</label>
-								<button class="btn btn-danger">Report</button>
-							</div>
-						</div>
-					</form>
+					<div class="form-group mb-3">
+						<label for="" class="form-control">Video Title <select
+							name="videoUserId" id="videoUserId" class="form-control m-3">
+								<c:forEach var="item" items="${vidList}">
+									<option value="${item.videoid}"
+										${item.videoid == videoUserId ? 'selected' : ''}>${item.videoid}</option>
+								</c:forEach>
+						</select>
+						</label>
+						<button class="btn btn-primary">Report</button>
+					</div>
 					<div class="row">
 						<div class="col mt-3">
 							<div class="table-responsive">
@@ -129,14 +125,16 @@
 											<th>Sent Date</th>
 										</tr>
 									</thead>
-									<tbody>
-										<tr>
-											<td>Chiến123</td>
-											<td>chien@gmail.com</td>
-											<td>chien@gmail.com</td>
-											<td>01/12/2023</td>
-										</tr>
-									</tbody>
+									<c:if test="${not empty userShares}">
+										<c:forEach var="item" items="${userShares}">
+											<tr>
+												<td>${item.username}</td>
+												<td>${item.receiverEmail}</td>
+												<td>${item.senderEmail}</td>
+												<td>${item.shareDate}</td>
+											</tr>
+										</c:forEach>
+									</c:if>
 								</table>
 							</div>
 						</div>

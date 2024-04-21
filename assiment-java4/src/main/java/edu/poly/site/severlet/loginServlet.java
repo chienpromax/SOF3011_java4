@@ -33,32 +33,35 @@ public class loginServlet extends HttpServlet {
 		SessionUtils.add(request, "username", username);
 		request.getRequestDispatcher("/Homepage").forward(request, response);
 	}
-
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		try {
-			LoginForm form = new LoginForm();
-			BeanUtils.populate(form, request.getParameterMap());
-			
-			UserDao dao = new UserDao();	
-			
-			User user = dao.findById(form.getUsername());
-			if (user != null && user.getPassword().equals(form.getPassword())) {
-				SessionUtils.add(request, "username", user.getUsername());
-				if (form.isRemember()) {
-					CookieUtils.add("username", form.getUsername(), 24, response);
-				}else {
-					CookieUtils.add("username", form.getUsername(), 0, response);
-				}
-				request.setAttribute("islogin", true);
-				request.setAttribute("name", user.getFullname());
-				request.getRequestDispatcher("/Homepage").forward(request, response);
-				return;
-			}
-			request.setAttribute("error", "invalid username or password");
-		} catch (Exception e) {
-			request.setAttribute("error", e.getMessage());
-		}
-		PageInfo.prepareAndForwardSite(request, response, PageType.SITE_LOGIN_PAGE);
+	    try {
+	        LoginForm form = new LoginForm();
+	        BeanUtils.populate(form, request.getParameterMap());
+
+	        UserDao dao = new UserDao();
+
+	        User user = dao.findById(form.getUsername());
+	        if (user != null && user.getPassword().equals(form.getPassword())) {
+	            SessionUtils.add(request, "username", user.getUsername());
+	            if (form.isRemember()) {
+	                CookieUtils.add("username", form.getUsername(), 24, response);
+	            } else {
+	                CookieUtils.add("username", form.getUsername(), 0, response);
+	            }
+
+	            if (user.getAdmin()) {
+	            	response.sendRedirect(request.getContextPath() + "/VideoManagement");
+	                return;
+	            } else {
+	            	request.getRequestDispatcher("/Homepage").forward(request, response);
+	            }
+	            return;
+	        }
+	        request.setAttribute("error", "invalid username or password");
+	    } catch (Exception e) {
+	        request.setAttribute("error", e.getMessage());
+	    }
+	    PageInfo.prepareAndForwardSite(request, response, PageType.SITE_LOGIN_PAGE);
 	}
+
 }

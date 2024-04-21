@@ -15,6 +15,7 @@ public class PageInfo {
         pageRoute.put(PageType.USER_MANAGEMENT_PAGE, new PageInfo("User Management", "/admin/users/users.jsp", null));
         pageRoute.put(PageType.REPORT_MANAGEMENT_PAGE, new PageInfo("User Management", "/admin/reports/reports.jsp", null));
         pageRoute.put(PageType.VIDEOS_MANAGEMENT_PAGE, new PageInfo("User Management", "/admin/videos/videos.jsp", null));
+        pageRoute.put(PageType.HOME_MANAGEMENT_PAGE, new PageInfo("home Management", "/admin/home/homeAdmin.jsp", null));
         
         pageRoute.put(PageType.SITE_HOME_PAGE, new PageInfo("Home", "/sites/home/home.jsp", null));
         pageRoute.put(PageType.SITE_LOGIN_PAGE, new PageInfo("login", "/sites/users/login.jsp", null));
@@ -22,8 +23,8 @@ public class PageInfo {
         pageRoute.put(PageType.SITE_CHANGE_PASSWORD_PAGE, new PageInfo("change-password", "/sites/users/change-password.jsp", null));
         pageRoute.put(PageType.SITE_EDIT_PROFILE_PAGE, new PageInfo("edit-profile", "/sites/users/edit-profile.jsp", null));
         pageRoute.put(PageType.SITE_FORGOT_PASSWORD_PAGE, new PageInfo("forgot-password", "/sites/users/forgot-password.jsp", null));
-        pageRoute.put(PageType.SITE_FAVORITE_PAGE, new PageInfo("favorite", "/sites/users/favorite.jsp", null));
-        pageRoute.put(PageType.SITE_VIDEO_DETAIL_PAGE, new PageInfo("detail", "/sites/users/detail.jsp", null));
+        pageRoute.put(PageType.SITE_FAVORITE_PAGE, new PageInfo("favorite", "/sites/videos/favorite.jsp", null));
+        pageRoute.put(PageType.SITE_VIDEO_DETAIL_PAGE, new PageInfo("detail", "/sites/videos/detail.jsp", null));
         pageRoute.put(PageType.SITE_SHARE_PAGE, new PageInfo("share", "/sites/videos/share.jsp", null));
     }
 

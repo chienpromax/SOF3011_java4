@@ -21,14 +21,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row pt-3 pb-2">
-            <div class="col-9">
-                <h1>video online</h1>
-            </div>
-            <div class="col-3 text-right">
-                <img src="/images/logo.png" alt="">
-            </div>
+    <div class="container" >
+        <div class="row">
+            <img alt="" src="./images/backgroung.png">
         </div>
         <div class="row">
             <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -52,7 +47,7 @@
                                 <a class="nav-link" href="Homepage">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Homepage">my favorites</a>
+                                <a class="nav-link" href="FavoriteVideo">my favorites</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"

@@ -5,10 +5,6 @@ import javax.persistence.*;
 import java.util.List;
 
 
-/**
- * The persistent class for the Users database table.
- * 
- */
 @Entity
 @Table(name="Users")
 @NamedQuery(name="User.findAll", query="SELECT u FROM User u")

@@ -68,6 +68,7 @@ public abstract class AbstractEntityDao<T> {
         T entity = em.find(entityClass, id);
         return entity;
     }
+    
 	public List<T> findAll() {
 		EntityManager em = jpaUtils.getEntityManager();
 		try {
